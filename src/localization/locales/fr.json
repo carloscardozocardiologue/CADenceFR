@@ -1,0 +1,196 @@
+{
+  "app": {
+    "title": "CADence FR 🫀",
+    "subtitle": "Calculateur de Probabilité d'une Coronaropathie Obstructive Chronique — Guidelines ESC 2024.",
+    "description": ""
+  },
+  "ui": {
+    "labels": {
+      "age": "Âge",
+      "gender": "Sexe",
+      "male": "Homme",
+      "female": "Femme",
+      "language": "Langue"
+    },
+    "buttons": {
+      "reset": "🔄 Réinitialiser",
+      "calculate": "Calculer"
+    },
+    "segmented_control": {
+      "select_score": "Sélectionner le score pour les recommandations"
+    }
+  },
+  "patient": {
+    "title": "🧑‍⚕️ Caractéristiques du Patient",
+    "age_help": "Validé pour les âges 30-79 ans. Les résultats hors de cette plage doivent être interprétés avec prudence.",
+    "basic_info": {
+      "age_range_error": "L'âge doit être entre {min_age} et {max_age} ans",
+      "age_validation_warning": "Modèle validé pour les âges {min_age}-{max_age} ans. Interpréter avec prudence."
+    },
+    "symptoms": {
+      "title": "Type de Symptôme",
+      "chest_pain": "Douleur Thoracique",
+      "dyspnea": "Dyspnée",
+      "classification_title": "Classification de la Douleur Thoracique",
+      "substernal": "Gêne thoracique rétrosternale",
+      "provoked": "Provoquée par l'effort ou le stress",
+      "relieved": "Soulagée par le repos ou la nitroglycérine",
+      "typical_angina": "🔴 Angor Typique (3/3 critères)",
+      "atypical_angina": "🟡 Angor Atypique (2/3 critères)",
+      "non_anginal": "🟢 Douleur Non-Angineuse (0-1/3 critères)",
+      "dyspnea_description": "Dyspnée d'effort",
+      "dyspnea_help": "Dyspnée équivalente à un angor atypique selon ESC 2024"
+    }
+  },
+  "risk_factors": {
+    "title": "⚠️ Facteurs de Risque",
+    "pill_help": "Sélectionnez tous les facteurs de risque présents",
+    "definitions_title": "📖 Définitions des Facteurs de Risque",
+    "diabetes": "Diabète",
+    "smoking": "Tabagisme Actuel/Passé",
+    "hypertension": "Hypertension",
+    "dyslipidemia": "Dyslipidémie",
+    "family_history": "Antécédents Familiaux de Coronaropathie Précoce",
+    "definitions": {
+      "diabetes": "Glycémie à jeun ≥7,0 mmol/L ou HbA1c ≥6,5% ou traitement antidiabétique en cours.",
+      "smoking": "Fumeur actuel ou arrêt depuis moins de 3 ans.",
+      "hypertension": "PA systolique ≥140 mmHg ou diastolique ≥90 mmHg ou traitement antihypertenseur en cours.",
+      "dyslipidemia": "Cholestérol total >5,0 mmol/L ou LDL >3,0 mmol/L ou traitement hypolipémiant en cours.",
+      "family_history": "Parent du 1er degré avec Coronaropathie avant 55 ans (homme) ou 65 ans (femme)."
+    }
+  },
+  "probability": {
+    "titles": {
+      "risk_assessment": "📊 Évaluation du Risque",
+      "rf_cl": "RF-CL",
+      "adj_rf_cl": "RF-CL Ajusté",
+      "cacs_cl": "CACS-CL",
+      "adj_cacs_cl": "CACS-CL Ajusté",
+      "post_test_rf_cl": "Probabilité Post-Test RF-CL",
+      "post_test_adj_rf_cl": "Probabilité Post-Test RF-CL Ajusté",
+      "post_test_cacs_cl": "Probabilité Post-Test CACS-CL"
+    },
+    "adjustment": {
+      "title": "⚕️ Ajustement selon les Constatations Cliniques",
+      "slider_label": "Probabilité ajustée (%)",
+      "info_text": "Ajustez le RF-CL en fonction des constatations cliniques supplémentaires non capturées par le modèle.",
+      "guidelines_title": "📋 Considérations pour l'Ajustement Clinique",
+      "guidelines_content": "### Considérations pour l'Ajustement Clinique\n\n**📊 Modifications ECG**\n- 📍 Anomalies ECG de repos — Ondes Q ou modifications du segment ST/onde T ↑ +10 à +15%\n- 📍 Constatations ECG d'effort — même si non diagnostiques ↑ +5 à +10%\n- 📍 Anomalies de conduction — BBG/BBD ↑ +5 à +10%\n\n**❤️ Fonction Cardiaque**\n- 💔 Dysfonction VG — sévère ou segmentaire ↑ +15 à +20%\n- 💓 Arythmie ventriculaire — trouble rythmique significatif ↑ +8 à +12%\n- 😮‍💨 Symptômes d'insuffisance cardiaque — dyspnée d'effort, tolérance réduite ↑ +8 à +12%\n\n**🫀 Maladie Vasculaire**\n- 🔄 Artériopathie périphérique — AOMI documentée ou symptômes ↑ +12 à +18%\n- 🔍 Calcification préexistante — notée sur imagerie thoracique antérieure ↑ +8 à +12%\n- 🔍 Maladie carotidienne — sténose carotidienne connue ↑ +8 à +12%\n- 🔍 Maladie aortique — athérosclérose aortique ↑ +5 à +8%\n\n**🏥 Comorbidités**\n- 🎯 Maladie rénale chronique — surtout si DFG <60 ↑ +8 à +12%\n- 🔥 Conditions inflammatoires — polyarthrite rhumatoïde, lupus ↑ +8 à +15%\n- ⚠️ Troubles métaboliques — maladie thyroïdienne, obésité ↑ +3 à +5%\n\n**📋 Évaluation des Facteurs de Risque**\n- 📌 Facteurs de risque multiples — au-delà de ceux capturés dans l'évaluation de base ↑ +5 à +8%\n- 📈 Sévérité des facteurs de risque — diabète mal contrôlé, hypertension sévère ↑ +8 à +12%\n- ⏳ Durée d'exposition — exposition à long terme aux facteurs de risque ↑ +3 à +5%\n- 🎯 Regroupement de facteurs de risque — facteurs multiples chez patient jeune (<50 ans) ↑ +10 à +15%\n\n**👥 Groupes de Patients Spécifiques**\n- 👩 Femmes ménopausées — surtout avec facteurs de risque ↑ +5 à +8%\n- 🎗️ Survivants du cancer — surtout après radiothérapie thoracique ↑ +10 à +15%\n- 🫀 Receveurs de transplantation — impact de l'immunosuppression ↑ +8 à +12%\n- 🦠 Patients VIH — athérosclérose accélérée ↑ +8 à +12%\n\n> ⚕️ *Ces estimations sont indicatives. L'ajustement final reste à la discrétion du clinicien.*",
+      "reset_adjustments": "Réinitialiser l'ajustement",
+      "total_delta": "Ajustement total"
+    },
+    "cacs": {
+      "title": "🫀 CACS (Score Calcique Coronarien)",
+      "input_label": "Entrez le CACS (score d'Agatston)",
+      "input_help": "Score d'Agatston issu du scanner calcique coronarien",
+      "interpretations": {
+        "no_calcification": "✅ Pas de calcification — risque Coronaropathie très faible",
+        "minimal": "✅ Calcification minime (1-9)",
+        "mild": "⚠️ Calcification légère (10-99)",
+        "moderate": "⚠️ Calcification modérée (100-399)",
+        "severe": "🔴 Calcification sévère (400-999)",
+        "extensive": "🔴 Calcification étendue (≥1000)"
+      }
+    }
+  },
+  "tests": {
+    "title": "🔬 Avez-vous des résultats de tests antérieurs ? Entrez-les ici pour une probabilité post-test",
+    "ffr_toggle": "Utiliser le référentiel FFR",
+    "ffr_help": "Basculer entre les ratios de vraisemblance anatomiques et FFR",
+    "ffr_info": "ℹ️ Le référentiel FFR s'applique uniquement à la Scintigraphie, la TEP et l'IRM cardiaque de stress",
+    "result_label": "Résultat",
+    "result_positive": "Positive",
+    "result_negative": "Negative",
+    "names": {
+      "ccta": "Coroscanner",
+      "stress_ecg": "ECG d'Effort",
+      "stress_echo": "Échocardiographie de Stress",
+      "spect": "Scintigraphie myocardique (SPECT)",
+      "pet": "TEP myocardique",
+      "stress_cmr": "IRM cardiaque de stress"
+    },
+    "ccta": {
+      "positive_label": "Coroscanner positif (Coronaropathie obstructive)",
+      "help": "Coroscanner — référentiel anatomique"
+    },
+    "high_risk_features": {
+      "stress_ecg": "Critères haut risque : sous-décalage ST ≥2mm, positivité précoce, dérivations multiples",
+      "stress_echo": "Critères haut risque : nouvelle anomalie de cinétique segmentaire dans ≥2 segments",
+      "spect": "Critères haut risque : large défaut de perfusion, territoires multiples",
+      "pet": "Critères haut risque : large défaut de perfusion, réserve coronaire réduite",
+      "stress_cmr": "Critères haut risque : nouvelle anomalie de cinétique ou large défaut de perfusion"
+    }
+  },
+  "recommendations": {
+    "title": "📋 Recommandations",
+    "based_on": "Recommandations basées sur **{score}** : **{probability}%**{asterisk}",
+    "tests": {
+      "ica": "Coronarographie",
+      "ccta": "Coroscanner",
+      "functional_imaging": "Imagerie Fonctionnelle",
+      "functional_imaging_short": "Imagerie Fonctionnelle",
+      "ccta_or_functional": "Coroscanner ou Imagerie Fonctionnelle",
+      "defer_testing": "Différer les Examens",
+      "anoca_inoca": "Bilan ANOCA / INOCA"
+    },
+    "reasons": {
+      "reason_label": "Raison",
+      "very_high_ptp": "Probabilité pré-test très élevée (>85%) — coronarographie directe indiquée",
+      "high_risk_ccta": "Critères de haut risque au Coroscanner — Coronaropathie obstructive probable",
+      "high_risk_functional": "Critères de haut risque à l'imagerie fonctionnelle — ischémie confirmée",
+      "uncertain_diagnosis": "Résultats discordants entre Coroscanner et imagerie fonctionnelle",
+      "obstructive_cad_excluded": "Coronaropathie obstructive exclue — étiologie non obstructive probable",
+      "uncertain_functional_significance": "Signification fonctionnelle incertaine des résultats du Coroscanner",
+      "non_diagnostic_functional": "Test fonctionnel non diagnostique — clarification anatomique nécessaire",
+      "rule_out_obstructive_cad": "Exclure une Coronaropathie obstructive par imagerie anatomique",
+      "negative_functional_low_ptp": "Test fonctionnel négatif avec probabilité pré-test faible — ANOCA/INOCA possible",
+      "very_low_ptp": "Probabilité pré-test très faible (≤5%) — le risque du test dépasse le bénéfice",
+      "low_moderate_ptp": "Probabilité pré-test faible à modérée (5-50%)",
+      "high_ptp": "Probabilité pré-test élevée (50-85%) — imagerie fonctionnelle préférée"
+    },
+    "performance": {
+      "performance_label": "Performance",
+      "ica_ffr": "Coronarographie avec capacité FFR pour évaluation hémodynamique",
+      "direct_ica": "Coronarographie directe — revascularisation potentiellement indiquée",
+      "ica_ffr_capability": "Coronarographie avec FFR pour évaluation hémodynamique",
+      "functional_testing": "Imagerie fonctionnelle pour évaluation de l'ischémie",
+      "ccta_recommended": "Coroscanner recommandé pour clarification anatomique",
+      "ccta_confirm": "Coroscanner pour confirmer ou exclure une Coronaropathie obstructive",
+      "either_modality": "Les deux modalités acceptables selon disponibilité locale",
+      "functional_preferred": "Imagerie fonctionnelle préférée pour probabilité élevée",
+      "invasive_coronary_functional": "Tests fonctionnels coronariens invasifs si symptômes persistants"
+    },
+    "quotes": {
+      "high_risk_ica": "En cas de critères de haut risque à l'imagerie non invasive, une coronarographie est recommandée. (Classe I, Niveau A — ESC 2024 CCS)",
+      "uncertain_diagnosis": "En cas de résultats discordants entre tests anatomiques et fonctionnels, une coronarographie avec FFR est recommandée. (Classe I, Niveau B — ESC 2024 CCS)",
+      "anoca_inoca": "Si une Coronaropathie obstructive est exclue, un bilan de dysfonction coronarienne non obstructive (ANOCA/INOCA) est recommandé en cas de symptômes persistants. (Classe I, Niveau B — ESC 2024 CCS)",
+      "uncertain_functional_significance": "En cas de sténose coronarienne de signification fonctionnelle incertaine au Coroscanner, une imagerie fonctionnelle complémentaire est recommandée. (Classe I, Niveau B — ESC 2024 CCS)",
+      "non_diagnostic_functional": "En cas de test fonctionnel non diagnostique, un Coroscanner est recommandé. (Classe I, Niveau B — ESC 2024 CCS)",
+      "rule_out_obstructive_cad": "Pour exclure une Coronaropathie obstructive, un Coroscanner est recommandé. (Classe I, Niveau B — ESC 2024 CCS)",
+      "very_low_ptp": "En cas de probabilité pré-test très faible (≤5%), il est recommandé de différer les examens complémentaires. (Classe IIa, Niveau B — ESC 2024 CCS)",
+      "low_moderate_ptp": "Pour une probabilité pré-test faible à modérée (5-50%), un Coroscanner ou une imagerie fonctionnelle sont recommandés. (Classe I, Niveau B — ESC 2024 CCS)",
+      "high_ptp": "Pour une probabilité pré-test élevée (50-85%), une imagerie fonctionnelle est recommandée en première intention. (Classe I, Niveau B — ESC 2024 CCS)"
+    },
+    "class_levels": {
+      "class_i_level_a": "Classe I — Niveau A",
+      "class_i_level_b": "Classe I — Niveau B",
+      "class_i_level_c": "Classe I — Niveau C",
+      "class_iia_level_a": "Classe IIa — Niveau A",
+      "class_iia_level_b": "Classe IIa — Niveau B",
+      "class_iia_level_c": "Classe IIa — Niveau C",
+      "class_iib_level_a": "Classe IIb — Niveau A",
+      "class_iib_level_b": "Classe IIb — Niveau B",
+      "class_iii_level_a": "Classe III — Niveau A",
+      "class_iii_level_b": "Classe III — Niveau B"
+    }
+  },
+  "footer": {
+    "references_title": "Références",
+    "references_text": "1. Vrints C, et al. 2024 ESC Guidelines for the management of chronic coronary syndromes. Eur Heart J. 2024.\n2. Winther S, et al. Incorporating coronary calcification into pre-test assessment of the likelihood of coronary artery disease. J Am Coll Cardiol. 2020.\n3. Knuuti J, et al. Meta-analysis of diagnostic test accuracy for non-invasive coronary artery disease testing. Eur Heart J. 2019.",
+    "disclaimer": "⚠️ Cet outil est destiné à un usage clinique éducatif uniquement. Il ne remplace pas le jugement clinique ni les guidelines institutionnelles. Toujours interpréter les résultats dans le contexte clinique global du patient.",
+    "developed_by": "Développé par <a href='https://x.com/cardioshades' target='_blank' style='text-decoration: none; color: inherit;'><strong>Dr. U Bhalraam</strong></a> MBChB, BMSc, MRCP<br><br>Traduction au Français : <strong>Dr. Carlos CARDOZO</strong><br>Cardiologue Interventionnel<br>Centre Cardiologique d'Evecquemont"
+  },
+  "errors": {
+    "general_error": "Une erreur s'est produite : {error}"
+  }
+}

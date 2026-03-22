@@ -1,0 +1,67 @@
+{
+  "app": {
+    "title": "CADence 🫀",
+    "description": "A clinical tool for estimating the pre-test probability of coronary artery disease (CAD) in patients with stable chest pain."
+  },
+  "ui": {
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "reset": "Reset",
+    "language": "Language",
+    "select_language": "Select your language",
+    "loading": "Loading..."
+  },
+  "patient": {
+    "title": "Patient Characteristics",
+    "age": "Age",
+    "sex": "Sex",
+    "male": "Male",
+    "female": "Female",
+    "chest_pain_type": "Chest Pain Type",
+    "typical_angina": "Typical Angina",
+    "atypical_angina": "Atypical Angina",
+    "non_anginal": "Non-anginal Pain",
+    "unknown": "Unknown"
+  },
+  "risk_factors": {
+    "title": "Risk Factors",
+    "hypertension": "Hypertension",
+    "diabetes": "Diabetes",
+    "dyslipidemia": "Dyslipidemia",
+    "smoking": "Smoking",
+    "family_history": "Family History of CAD"
+  },
+  "probability": {
+    "title": "Pre-test Probability",
+    "calculate": "Calculate Probability",
+    "result": "Estimated Pre-test Probability",
+    "low": "Low",
+    "intermediate": "Intermediate",
+    "high": "High"
+  },
+  "tests": {
+    "title": "Test Results",
+    "ecg": "ECG",
+    "stress_test": "Stress Test",
+    "ct_angio": "CT Angiography",
+    "result": "Result",
+    "positive": "Positive",
+    "negative": "Negative",
+    "indeterminate": "Indeterminate"
+  },
+  "recommendations": {
+    "title": "Recommendations",
+    "further_testing": "Further Testing Recommended",
+    "no_testing": "No Further Testing Needed",
+    "treatment": "Treatment Recommendation"
+  },
+  "footer": {
+    "disclaimer": "This tool is for educational purposes only and should not replace clinical judgment.",
+    "source": "Source: ESC Guidelines 2019"
+  },
+  "errors": {
+    "invalid_input": "Invalid input. Please check your entries.",
+    "calculation_error": "An error occurred during calculation."
+  }
+}
