@@ -111,14 +111,14 @@
     },
     "ccta": {
       "positive_label": "Coroscanner positif (Coronaropathie obstructive)",
-      "help": "Coroscanner — référentiel anatomique"
+      "help": "**Critères de haut risque au Coroscanner :**\n- Sténose du tronc commun ≥50%\n- Maladie tritronculaire avec sténose ≥70%\n- Maladie bitronculaire avec sténose ≥70% incluant l'IVA proximale\n- Maladie monotronculaire de l'IVA proximale avec sténose ≥70% et FFR-CT ≤0,80"
     },
     "high_risk_features": {
-      "stress_ecg": "Critères haut risque : sous-décalage ST ≥2mm, positivité précoce, dérivations multiples",
-      "stress_echo": "Critères haut risque : nouvelle anomalie de cinétique segmentaire dans ≥2 segments",
-      "spect": "Critères haut risque : large défaut de perfusion, territoires multiples",
-      "pet": "Critères haut risque : large défaut de perfusion, réserve coronaire réduite",
-      "stress_cmr": "Critères haut risque : nouvelle anomalie de cinétique ou large défaut de perfusion"
+      "stress_ecg": "**Critères de haut risque à l'ECG d'effort :**\n• Score de Duke sur tapis roulant < −10",
+      "stress_echo": "**Critères de haut risque à l'Échocardiographie de stress :**\n• ≥3 segments sur 16 avec hypokinésie ou akinésie induite par le stress",
+      "spect": "**Critères de haut risque à la Scintigraphie myocardique :**\n• Zone d'ischémie ≥10% du myocarde du VG",
+      "pet": "**Critères de haut risque à la TEP myocardique :**\n• Zone d'ischémie ≥10% du myocarde du VG",
+      "stress_cmr": "**Critères de haut risque à l'IRM cardiaque de stress :**\n• ≥2 segments sur 16 avec défauts de perfusion au stress\n• ou ≥3 segments dysfonctionnels induits par la dobutamine"
     }
   },
   "recommendations": {
