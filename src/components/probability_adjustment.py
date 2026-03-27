@@ -12,17 +12,32 @@ def _on_slider_change():
 
 
 def _on_reset_click():
+    """Reset adjustment: return slider to original RF-CL, not to zero."""
     st.session_state.manual_rf_cl_adjustment = None
+    # Delete the cached slider value so the next render re-initialises
+    # it from base_rf_cl (synced below in render_probability_adjustment)
     if "manual_adjustment_value" in st.session_state:
         del st.session_state.manual_adjustment_value
 
 
 def render_probability_adjustment(base_rf_cl: float) -> None:
+    # ── KEY FIX ────────────────────────────────────────────────────────────────
+    # Always persist the original RF-CL so the reset button can reference it.
+    st.session_state.base_rf_cl = base_rf_cl
+
+    # If no manual adjustment is active, force the slider widget to match the
+    # current RF-CL.  Streamlit's slider ignores value= once the key exists in
+    # session_state, so we must set it explicitly before the widget renders.
+    if st.session_state.manual_rf_cl_adjustment is None:
+        st.session_state["manual_adjustment_value"] = float(base_rf_cl)
+    # ──────────────────────────────────────────────────────────────────────────
+
     if st.session_state.manual_rf_cl_adjustment is not None:
         st.metric(
             translator.t("probability.titles.adj_rf_cl"),
             f"{st.session_state.manual_rf_cl_adjustment:.1f}%*",
-            delta=f"{st.session_state.manual_rf_cl_adjustment - base_rf_cl:.1f}%"
+            delta=f"{st.session_state.manual_rf_cl_adjustment - base_rf_cl:.1f}%",
+            delta_color="inverse"
         )
     else:
         st.metric(
@@ -35,9 +50,14 @@ def render_probability_adjustment(base_rf_cl: float) -> None:
         col1, col2 = st.columns([0.7, 0.3], vertical_alignment="bottom")
 
         with col1:
-            starting_value = (st.session_state.manual_rf_cl_adjustment
-                            if st.session_state.manual_rf_cl_adjustment is not None
-                            else base_rf_cl)
+            # starting_value drives the slider only on first render (before
+            # the key exists in session_state).  After that, the explicit
+            # session_state assignment above takes over.
+            starting_value = (
+                st.session_state.manual_rf_cl_adjustment
+                if st.session_state.manual_rf_cl_adjustment is not None
+                else base_rf_cl
+            )
             st.slider(
                 translator.t("probability.adjustment.slider_label"),
                 min_value=0.0,
@@ -85,7 +105,8 @@ def render_cacs_section(current_prob: float) -> Optional[int]:
                 st.metric(
                     metric_label,
                     f"{cacs_cl:.1f}%{asterisk}",
-                    delta=f"{cacs_cl - current_prob:.1f}%"
+                    delta=f"{cacs_cl - current_prob:.1f}%",
+                    delta_color="inverse"
                 )
             with col2:
                 _render_cacs_interpretation(cacs)

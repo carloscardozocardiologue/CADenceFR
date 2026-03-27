@@ -141,5 +141,6 @@ def _render_test_results_metric(test_results: Dict[str, str]) -> None:
     st.metric(
         label,
         f"{adjusted_prob:.1f}%{asterisk}",
-        delta=f"{adjusted_prob - base_prob:.1f}%"
+        delta=f"{adjusted_prob - base_prob:.1f}%",
+        delta_color="inverse"
     )
