@@ -87,6 +87,7 @@ def render_cacs_section(current_prob: float) -> Optional[int]:
             translator.t("probability.cacs.input_label"),
             min_value=0,
             value=None,
+            key="cacs_score",
             help=translator.t("probability.cacs.input_help")
         )
 
